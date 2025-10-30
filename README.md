@@ -1,47 +1,73 @@
-# flutter_crossplatform_demo
+<!-- ──────────────────────────────────────────────── -->
+<!-- HEADER LOGO -->
+<p align="center">
+  <img src="docs/images/logo-full.png" alt="Electro Botics Logo" width="280" style="border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.3);" />
+</p>
 
-A **Flutter demo app** showing clean compilation across **Web**, **Android**, **iOS**, and **macOS** targets.
-
-This project demonstrates Flutter’s ability to maintain a consistent build pipeline and UI experience across platforms using a single codebase.
-
----
-
-## 🧩 Overview
-- Built entirely in **Dart + Flutter**.
-- Designed for a **mobile viewport** (390×844) even on web/desktop — intentionally constrained for demo purposes.
-- Currently uses **static layout and data**.
-- Future updates will introduce **live data integration** and responsive scaling.
+<h1 align="center">Flutter Cross-Platform Demo</h1>
+<p align="center">
+  <strong>Web  •  iOS  •  Android  •  macOS</strong><br/>
+  <em>One codebase — Everywhere</em>
+</p>
 
 ---
 
-## 💻 Tested Platforms
-| Platform | Status | Notes |
-|-----------|---------|-------|
-| **Web** | ✅ | Hosted via GitHub Pages (mobile-sized viewport) |
-| **Android** | ✅ | Tested on emulator |
-| **iOS** | ✅ | Tested on simulator |
-| **macOS** | ✅ | Desktop build sized to iPhone-like window |
+### 🌐 Live Demo
+<a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo/" target="_blank">
+  <img src="docs/images/electro_botics_splash_full.png" width="120" alt="Launch Demo" align="left" style="margin-right:1rem; border-radius:16px; box-shadow:0 4px 8px rgba(0,0,0,0.25);" />
+</a>
+
+👉 **[Launch the running web app](https://timmytimmytimmytime.github.io/flutter_crossplatform_demo/)**  
+*(Hosted via GitHub Pages — optimized for a mobile viewport)*
+
+<br clear="left"/>
 
 ---
 
-## 🚀 Build & Run
+## 🧭 Purpose
+
+This project exists as a **proof-of-execution** for modern Flutter development:  
+a single Dart codebase that builds and runs seamlessly across all major targets — Web, iOS, Android, and macOS.  
+
+It’s intentionally small-screen focused to demonstrate design discipline and platform-agnostic polish rather than size or complexity.
+
+---
+
+## 🧩 Highlights
+
+| Feature | Description |
+|----------|--------------|
+| **Cross-platform builds** | Verified on Web (Chrome), Android (Emulator), iOS (Simulator), macOS (Desktop) |
+| **Custom splash screen** | Gradient Electro Botics branding with smooth transitions |
+| **Static cards** | “Weeding”, “Performance”, and “Map” layouts as placeholders |
+| **Expandable architecture** | Future-ready for live data and responsive scaling |
+| **GitHub Pages deployment** | Fully automated static hosting pipeline |
+
+---
+
+## 🧠 Design Intent
+
+> “Show, don’t tell.”  
+> This repo isn’t a toy — it’s a concise representation of *craft*: thoughtful layout, clean Dart, multi-target builds, and live deployment proof.  
+
+It’s the kind of project link you drop into a portfolio or recruiter email to demonstrate technical precision and execution capability.
+
+---
+
+## ⚙️ Build & Run
 
 ```bash
-# Fetch dependencies
 flutter pub get
 
 # Web
-flutter build web
+flutter build web --base-href /flutter_crossplatform_demo/
 flutter run -d chrome
 
 # Android
-flutter build apk
 flutter run -d android
 
 # iOS
-flutter build ios
 flutter run -d ios
 
 # macOS
-flutter build macos
 flutter run -d macos
