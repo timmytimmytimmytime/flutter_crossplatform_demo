@@ -1,0 +1,20 @@
+flutter_native_splash:
+  # Disable none
+  android: true
+  ios: true
+  web: true
+
+  # Background color (matches dark purple background)
+  color: "#1B1240"
+
+  # Splash image (the Electro Robotics logo and text)
+  image: electro_botics_splash_full.png
+
+  # Fullscreen hides status bar
+  fullscreen: true
+
+  # Android 12+
+  android_12:
+    color: "#1B1240"
+    image: electro_botics_splash_full.png
+    icon_background_color: "#1B1240"
