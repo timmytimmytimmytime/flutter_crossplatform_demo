@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../app/app_theme.dart';
 import '../../mixin/gradient_mixin.dart';
 
 class NotificationsScreen extends StatelessWidget with GradientHelpers {
@@ -42,7 +41,7 @@ class NotificationsScreen extends StatelessWidget with GradientHelpers {
       backgroundColor: scheme.background,
       appBar: AppBar(
         title: gradientText(
-          'Notifications - $machineId',
+          'Notifications   - $machineId',
           textTheme.titleLarge!,
         ),
         centerTitle: true,

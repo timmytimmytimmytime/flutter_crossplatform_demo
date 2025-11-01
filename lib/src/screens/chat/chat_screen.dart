@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../app/app_theme.dart';
 import '../../mixin/gradient_mixin.dart';
 
 class ChatScreen extends StatelessWidget with GradientHelpers {

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../../app/app_theme.dart';
+import '../../../screens/metrics/metric_details.dart';
 
 class MetricCard extends StatelessWidget {
   final String title;
   final String value;
   final String? subtitle;
-  final int metricNumber;
+  final String metricNumber;
 
   const MetricCard({
     super.key,
@@ -21,7 +22,14 @@ class MetricCard extends StatelessWidget {
     final isDark = scheme.brightness == Brightness.dark;
 
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, '$metricNumber'),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => MetricScreen(metricTileNumber: metricNumber),
+          ),
+        );
+      },
       child: Card(
         elevation: 3,
         color: isDark
