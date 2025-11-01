@@ -8,7 +8,7 @@ flutter_native_splash:
   color: "#1B1240"
 
   # Splash image (the Electro Robotics logo and text)
-  image: electro_botics_splash_full.png
+  image: assets/images/bigger-logo.png
 
   # Fullscreen hides status bar
   fullscreen: true
@@ -16,5 +16,5 @@ flutter_native_splash:
   # Android 12+
   android_12:
     color: "#1B1240"
-    image: electro_botics_splash_full.png
+    image: assets/images/bigger-logo.png
     icon_background_color: "#1B1240"

@@ -22,6 +22,7 @@ class MachineInfoScreen extends StatelessWidget with GradientHelpers {
         elevation: 0,
       ),
       body: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.symmetric(vertical: 16),
         child: Column(
           children: [

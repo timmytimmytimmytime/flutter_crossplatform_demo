@@ -18,7 +18,7 @@
 <tr>
 <td width="180">
   <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo/" target="_blank">
-    <img src="docs/images/electro_botics_splash_full.png" width="160" alt="Launch Flutter Demo" style="border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,0.25);" />
+    <img src="docs/images/Flutter-demo-static.jpg" width="160" alt="Launch Flutter Demo" style="border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,0.25);" />
   </a>
 </td>
 <td>
