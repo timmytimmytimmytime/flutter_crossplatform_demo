@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'src/app.dart';
+import 'src/app/app.dart';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:window_manager/window_manager.dart';
