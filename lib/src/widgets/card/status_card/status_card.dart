@@ -1,55 +1,67 @@
 import 'package:flutter/material.dart';
+import '../../../app/app_theme.dart';
 
 class StatusCard extends StatelessWidget {
   final String title;
   final String subtitle;
-  final Color backgroundColor;
 
   const StatusCard({
     super.key,
     this.title = 'Weeding',
     this.subtitle = 'Turnip',
-    this.backgroundColor = Colors.green,
   });
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final isDark = scheme.brightness == Brightness.dark;
+
+    // Background: gradient in dark mode, light accent in light mode
+    final BoxDecoration decoration = isDark
+        ? const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [kBrandPrimary, kBrandSecondary],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+          )
+        : BoxDecoration(
+            color: scheme.primary.withOpacity(0.15),
+            borderRadius: const BorderRadius.all(Radius.circular(12)),
+          );
+
     return Padding(
       padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
       child: Row(
         children: [
           Expanded(
-            child: Card(
-              color: backgroundColor,
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              margin: const EdgeInsets.symmetric(horizontal: 8),
+            child: Container(
+              decoration: decoration,
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       title,
-                      style: const TextStyle(
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontSize: 22,
-                        fontFamily: 'Exo 2',
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        letterSpacing: 0.5,
+                        color: isDark
+                            ? Colors.white
+                            : scheme.onSurface.withOpacity(0.9),
                       ),
                     ),
                     const SizedBox(height: 6),
                     Text(
                       subtitle,
-                      style: const TextStyle(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.w700,
-                        color: Colors.white70,
-                        fontSize: 20,
-                        height: 1.2,
+                        color: isDark
+                            ? Colors.white70
+                            : scheme.onSurface.withOpacity(0.7),
+                        fontSize: 18,
                       ),
                     ),
                   ],

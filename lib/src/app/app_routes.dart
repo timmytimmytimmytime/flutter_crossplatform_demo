@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/home/home_screen.dart';
-import '../screens/chat/chat_screen.dart';
+// import '../screens/chat/chat_screen.dart';
 import '../screens/metrics/metric_details.dart';
 
 class AppRoutes {
@@ -12,8 +12,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case AppRoutes.home:
       return MaterialPageRoute(builder: (_) => const HomeScreen());
-    case AppRoutes.chat:
-      return MaterialPageRoute(builder: (_) => const ChatScreen());
+    // case AppRoutes.chat:
+    //   return MaterialPageRoute(builder: (_) => const ChatScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => MetricScreen(metricTileNumber: settings.name ?? ''),

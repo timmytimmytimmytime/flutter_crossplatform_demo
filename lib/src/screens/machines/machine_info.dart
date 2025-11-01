@@ -2,28 +2,40 @@ import 'package:flutter/material.dart';
 import '../../widgets/card/status_card/status_card.dart';
 import '../../widgets/card/metric_card/metric_card.dart';
 import '../../widgets/card/map_card/map_card.dart';
+import '../../mixin/gradient_mixin.dart';
 
-class MachineInfoScreen extends StatelessWidget {
-  const MachineInfoScreen({super.key});
+class MachineInfoScreen extends StatelessWidget with GradientHelpers {
+  final String machineId;
+  const MachineInfoScreen({super.key, required this.machineId});
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+
     return Scaffold(
-      // backgroundColor: #0A0024,
-      backgroundColor: const Color(0xFF1B1240),
+      backgroundColor: scheme.background,
       appBar: AppBar(
-        title: Text(
-          'Electro Botics',
-          style: const TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.black,
+        backgroundColor: scheme.surface,
+        title: gradientText('Info - $machineId', theme.textTheme.titleLarge!),
+        centerTitle: true,
+        elevation: 0,
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 16),
         child: Column(
           children: [
-            StatusCard(title: 'Weeding', subtitle: 'Turnip'),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: StatusCard(
+                title: 'Weeding',
+                subtitle: 'Turnip',
+                // If StatusCard supports colors, pass scheme.primary/secondary there too
+              ),
+            ),
+            const SizedBox(height: 12),
             GridView.count(
-              padding: const EdgeInsets.only(left: 16, top: 16, right: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               crossAxisCount: 2,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -56,7 +68,12 @@ class MachineInfoScreen extends StatelessWidget {
                 ),
               ],
             ),
-            MapCard(),
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child:
+                  MapCard(), // This can also pull its color from scheme.surface if desired
+            ),
           ],
         ),
       ),
