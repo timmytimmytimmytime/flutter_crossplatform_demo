@@ -15,31 +15,17 @@
 ### 🌐 Live Demo
 
 <table>
-<tr>
-<td width="180">
-  <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo/" target="_blank">
-    <img src="docs/images/Flutter-demo-static.jpg" width="160" alt="Launch Flutter Demo" style="border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,0.25);" />
-  </a>
-</td>
-<td>
-  <p>
-    👉 <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo/" target="_blank"><strong>Launch the running web app</strong></a><br/>
-    <em>(Hosted via GitHub Pages — optimized for a mobile viewport)</em>
-  </p>
-</td>
-</tr>
+  <tr>
+    <td width="260" valign="top"   align="center">
+      <img src="docs/images/Flutter-demo.gif"
+           alt="Flutter Cross-Platform Demo"
+           width="240">
+       <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo"><strong>Launch the running web app</strong></a>
+       <br>
+      <em>(Hosted via GitHub Pages)</em>
+    </td>
+  </tr>
 </table>
-
-<!-- <p>
-  <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo/" target="_blank">
-    <img src="docs/images/electro_botics_splash_full.png" alt="Futter Crossplatform Thumbnail" width="160" style="border-radius:16px; box-shadow:0 4px 8px rgba(0,0,0,0.25);" />
-  </a>
-</p>
-
-<p>
-  👉 <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo/" target="_blank"><strong>Launch the running web app</strong></a><br/>
-  <em>(Hosted via GitHub Pages — optimized for a mobile viewport)</em>
-</p> -->
 
 ---
 
