@@ -17,12 +17,14 @@
 <table>
   <tr>
     <td width="260" valign="top"   align="center">
-      <img src="docs/images/Flutter-demo.gif"
-           alt="Flutter Cross-Platform Demo"
-           width="240">
-       <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo"><strong>Launch the running web app</strong></a>
-       <br>
-      <em>(Hosted via GitHub Pages)</em>
+      <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo">
+        <img src="docs/images/Flutter-demo.gif"
+            alt="Flutter Cross-Platform Demo"
+            width="240">
+        <a href="https://timmytimmytimmytime.github.io/flutter_crossplatform_demo"><strong>Launch the running web app</strong></a>
+        <br>
+        <em>(Hosted via GitHub Pages)</em>
+      </a>
     </td>
   </tr>
 </table>
